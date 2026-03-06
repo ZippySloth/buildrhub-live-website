@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 import FadeIn from '../FadeIn';
 
 const CTASection = () => (
-  <section className="py-24 md:py-32">
+  <section className="py-16 md:py-32">
     <div className="container mx-auto px-4 md:px-6 text-center">
       <FadeIn>
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+        <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 sm:mb-6">
           Ready to <span className="gradient-text">stop guessing?</span>
         </h2>
-        <p className="text-lg text-muted-foreground max-w-xl mx-auto mb-8">
+        <p className="text-base sm:text-lg text-muted-foreground max-w-xl mx-auto mb-6 sm:mb-8">
           Book a free 15-minute call. No prep. We will tell you exactly what is broken.
         </p>
         <Link

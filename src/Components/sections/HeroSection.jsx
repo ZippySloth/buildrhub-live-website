@@ -12,7 +12,7 @@ const metrics = [
 const barHeights = [45, 65, 55, 80, 70, 90];
 
 const HeroSection = () => (
-  <section className="relative min-h-screen flex items-center overflow-hidden">
+  <section className="relative min-h-[85vh] md:min-h-screen flex items-center overflow-hidden">
     {/* Floating gradient orbs */}
     <div className="absolute top-1/4 -left-32 w-64 h-64 sm:w-96 sm:h-96 bg-violet-600/20 rounded-full blur-3xl animate-float" />
     <div className="absolute bottom-1/4 -right-32 w-48 h-48 sm:w-80 sm:h-80 bg-purple-500/15 rounded-full blur-3xl animate-float-slow" />
@@ -26,10 +26,10 @@ const HeroSection = () => (
             <br />
             <span className="gradient-text">We fix it.</span>
           </h1>
-          <p className="mt-6 text-lg text-muted-foreground max-w-2xl">
+          <p className="mt-4 sm:mt-6 text-base sm:text-lg text-muted-foreground max-w-2xl">
             We connect your tools, build your dashboards, and run your data stack — so you stop pulling numbers and start making decisions.
           </p>
-          <div className="mt-8">
+          <div className="mt-6 sm:mt-8">
             <Link
               to="/demo"
               className="inline-flex items-center px-8 py-4 text-base font-medium text-white rounded-full bg-gradient-to-r from-violet-600 to-purple-500 hover:from-violet-500 hover:to-purple-400 transition-all shadow-lg shadow-violet-500/25"

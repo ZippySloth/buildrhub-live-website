@@ -8,10 +8,10 @@ const steps = [
 ];
 
 const HowItWorksSection = () => (
-  <section className="py-24 md:py-32">
+  <section className="py-16 md:py-32">
     <div className="container mx-auto px-4 md:px-6">
       <FadeIn>
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-10 md:mb-16">
           Three steps. <span className="gradient-text">That is it.</span>
         </h2>
       </FadeIn>

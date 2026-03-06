@@ -14,10 +14,10 @@ const faqs = [
 ];
 
 const FAQSection = () => (
-  <section id="faq" className="py-24 md:py-32">
+  <section id="faq" className="py-16 md:py-32">
     <div className="container mx-auto px-4 md:px-6 max-w-2xl">
       <FadeIn>
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Questions</h2>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">Questions</h2>
       </FadeIn>
       <FadeIn delay={0.1}>
         <Accordion type="single" collapsible className="space-y-3">

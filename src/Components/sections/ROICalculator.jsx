@@ -7,11 +7,11 @@ const ROICalculator = () => {
   const monthly = Math.round(hours * rate * 4.33);
 
   return (
-    <section className="py-24 md:py-32">
+    <section className="py-16 md:py-32">
       <div className="container mx-auto px-4 md:px-6 max-w-2xl">
         <FadeIn>
           <div className="glass rounded-2xl p-5 sm:p-8 md:p-12 glow-purple">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 md:mb-10">
               What is manual reporting <span className="gradient-text">costing you?</span>
             </h2>
 

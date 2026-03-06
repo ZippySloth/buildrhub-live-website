@@ -9,19 +9,19 @@ const testimonials = [
 ];
 
 const Testimonials = () => (
-  <section className="py-24 md:py-32">
+  <section className="py-16 md:py-32">
     <div className="container mx-auto px-4 md:px-6">
       <FadeIn>
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-10 md:mb-16">
           Teams that <span className="gradient-text">stopped guessing</span>
         </h2>
       </FadeIn>
-      <div className="grid md:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-3 gap-4 sm:gap-6">
         {testimonials.map((t, i) => (
           <FadeIn key={i} delay={i * 0.15}>
-            <div className="glass rounded-2xl p-8 h-full flex flex-col">
-              <span className="text-4xl text-violet-400 mb-4">&ldquo;</span>
-              <p className="text-white text-lg mb-6 flex-1">{t.quote}</p>
+            <div className="glass rounded-2xl p-5 sm:p-8 h-full flex flex-col">
+              <span className="text-3xl sm:text-4xl text-violet-400 mb-3 sm:mb-4">&ldquo;</span>
+              <p className="text-white text-base sm:text-lg mb-4 sm:mb-6 flex-1">{t.quote}</p>
               <div className="flex gap-1 mb-4">
                 {[...Array(5)].map((_, j) => (
                   <Star key={j} className="h-4 w-4 fill-violet-400 text-violet-400" />

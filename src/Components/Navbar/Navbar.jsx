@@ -33,8 +33,13 @@ const Navbar = () => {
 
   const close = () => { setMobileOpen(false); setDropdownOpen(false); };
 
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [mobileOpen]);
+
   return (
-    <header className={`fixed top-0 z-50 w-full transition-all duration-300 ${mobileOpen || scrolled ? 'bg-background/95 backdrop-blur-xl border-b border-white/5' : 'bg-transparent'}`}>
+    <header className={`fixed top-0 z-50 w-full transition-all duration-300 ${mobileOpen || scrolled ? 'bg-[#0a0a1a] border-b border-white/5' : 'bg-transparent'}`}>
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <Link to="/" className="flex items-center" onClick={close}>
           <img src={logoWhite} alt="BuilderHub" className="h-8 md:h-10" />
@@ -74,22 +79,22 @@ const Navbar = () => {
           >
             Book a Demo →
           </Link>
-          <button className="md:hidden p-1 text-white" onClick={() => setMobileOpen(!mobileOpen)}>
+          <button className="md:hidden p-2 text-white relative z-50" onClick={() => setMobileOpen(!mobileOpen)}>
             {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
       </div>
 
       {mobileOpen && (
-        <div className="md:hidden fixed inset-0 top-16 bg-background backdrop-blur-xl z-40">
-          <nav className="flex flex-col gap-6 p-8 text-lg font-medium">
+        <div className="md:hidden fixed inset-0 top-16 bg-[#0a0a1a] z-40 overflow-y-auto">
+          <nav className="flex flex-col gap-5 p-6 text-base font-medium">
             <p className="text-xs text-muted-foreground uppercase tracking-wider">Services</p>
             {serviceLinks.map(({ to, icon: Icon, label }) => (
               <Link key={to} to={to} onClick={close} className="flex items-center gap-3 text-white hover:text-violet-400 transition-colors pl-2">
                 <Icon className="h-5 w-5 text-violet-400" /> {label}
               </Link>
             ))}
-            <div className="border-t border-white/10 pt-4" />
+            <div className="border-t border-white/10 pt-3" />
             <Link to="/pricing" onClick={close} className="text-white hover:text-violet-400 transition-colors">Pricing</Link>
             <Link to="/industries" onClick={close} className="text-white hover:text-violet-400 transition-colors">Industries</Link>
             <Link to="/blog" onClick={close} className="text-white hover:text-violet-400 transition-colors">Blog</Link>

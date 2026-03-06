@@ -15,12 +15,12 @@ const tools = [
 ];
 
 const LogoCloud = () => (
-  <section className="py-12 border-y border-white/5 overflow-hidden">
-    <p className="text-center text-lg font-semibold text-white/70 uppercase tracking-widest mb-8">Built with tools trusted by the best</p>
+  <section className="py-8 sm:py-12 border-y border-white/5 overflow-hidden">
+    <p className="text-center text-xs sm:text-sm font-semibold text-white/70 uppercase tracking-widest mb-6 sm:mb-8 px-4">Built with tools trusted by the best</p>
     <div className="relative">
       <div className="flex animate-marquee whitespace-nowrap" style={{ willChange: 'transform' }}>
         {[...tools, ...tools, ...tools].map((tool, i) => (
-          <span key={i} className="mx-4 px-5 py-2.5 text-base font-medium text-muted-foreground border border-white/10 rounded-full shrink-0">
+          <span key={i} className="mx-2 sm:mx-4 px-3 sm:px-5 py-1.5 sm:py-2.5 text-xs sm:text-base font-medium text-muted-foreground border border-white/10 rounded-full shrink-0">
             {tool}
           </span>
         ))}
