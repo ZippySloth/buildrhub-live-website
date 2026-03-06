@@ -19,6 +19,7 @@ const ContactPage = () => {
     setLoading(true);
     setError('');
     try {
+      if (!supabase) throw new Error('Form submissions are temporarily unavailable.');
       const { error: supaError } = await supabase.from('audit_requests').insert([formData]);
       if (supaError) throw supaError;
       setSuccess(true);
