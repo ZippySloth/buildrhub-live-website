@@ -54,9 +54,9 @@ const DemoPage = () => {
             {/* Right — Calendly embed */}
             <FadeIn delay={0.2}>
               <div
-                className="calendly-inline-widget rounded-2xl overflow-hidden"
+                className="calendly-inline-widget rounded-2xl overflow-hidden w-full"
                 data-url="https://calendly.com/alalawi-faical?background_color=0a0a1a&text_color=ffffff&primary_color=7c3aed"
-                style={{ minWidth: '320px', minHeight: '700px' }}
+                style={{ minWidth: '320px', height: '700px' }}
               />
             </FadeIn>
           </div>
