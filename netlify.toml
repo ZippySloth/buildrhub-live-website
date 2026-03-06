@@ -2,11 +2,8 @@
   command = "npm run build"
   publish = "dist"
 
-# SPA routing — send all paths to index.html
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+[build.environment]
+  NODE_VERSION = "22"
 
 # Force HTTPS
 [[redirects]]
@@ -22,6 +19,12 @@
   status = 301
   force = true
 
+# SPA routing — must be last (fallback)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
 # Security + SEO headers
 [[headers]]
   for = "/*"
@@ -32,13 +35,12 @@
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
 
-# Cache static assets aggressively
+# Cache static assets
 [[headers]]
   for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# Cache images
 [[headers]]
   for = "*.png"
   [headers.values]
